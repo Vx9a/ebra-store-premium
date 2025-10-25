@@ -71,39 +71,41 @@ EBRA Store Premium includes a comprehensive set of features expected from modern
 
 ## 3. Project Structure
 
-The project follows a clean, scalable architecture:
+Below is an improved visual representation of the project's file structure to enhance readability and clarity:
 
 ```
 ebra-store-premium/
 │
-├─ app/
-│  ├─ page.tsx               # Product list page
-│  ├─ cart/page.tsx          # Shopping cart page
-│  ├─ product/[id]/page.tsx  # Dynamic product detail pages
-│  └─ layout.tsx             # Base layout file
+├── app/                      # Application routing and page files
+│   ├── page.tsx              # Product list page (home)
+│   ├── cart/
+│   │   └── page.tsx          # Shopping cart page
+│   └── product/
+│       └── [id]/
+│           └── page.tsx      # Dynamic product details
 │
-├─ components/
-│  ├─ Navbar.tsx             # Sticky navigation header
-│  ├─ Footer.tsx             # Footer layout component
-│  ├─ ProductCard.tsx        # Product preview cards
-│  ├─ ProductDetails.tsx     # Detailed product view
-│  └─ CartItem.tsx           # Items rendered inside the cart page
+├── components/               # Reusable UI components
+│   ├── Navbar.tsx            # Sticky top navigation bar
+│   ├── Footer.tsx            # Footer component
+│   ├── ProductCard.tsx       # Product preview card layout
+│   ├── ProductDetails.tsx    # Detailed product information view
+│   └── CartItem.tsx          # Individual cart item display
 │
-├─ store/
-│  └─ cart.ts                # Zustand implementation for cart state
+├── store/                    # Global state management (Zustand)
+│   └── cart.ts               # Cart store logic and actions
 │
-├─ lib/
-│  └─ api.ts                 # API helper utilities
+├── lib/                      # Utility and helper functions
+│   └── api.ts                # API request handlers
 │
-├─ public/
+├── styles/                   # Global and tailwind styles
+│   └── globals.css           # Global CSS overrides
 │
-├─ styles/
-│  └─ globals.css            # Global styling and resets
+├── public/                   # Static assets (images, icons, etc.)
 │
-├─ tailwind.config.ts
-├─ tsconfig.json
-├─ package.json
-└─ README.md
+├── tailwind.config.ts        # TailwindCSS configuration
+├── tsconfig.json             # TypeScript configuration
+├── package.json              # Dependency and script definitions
+└── README.md                 # Project documentation
 ```
 
 ---
@@ -261,81 +263,10 @@ The following situations are explicitly controlled:
 
 ---
 
-## 13. Contribution Guidelines
+## 13. License
 
-Developers wishing to extend functionality should:
+This project is distributed under the MIT License.
 
-1. Create a feature branch
-2. Write clean component code
-3. Maintain TypeScript conformity
-4. Run tests before pushing
+## Credits
 
-Example contribution workflow:
-
-```
-git checkout -b feature/new-widget
-git commit -m "Added new feature"
-git push origin feature/new-widget
-```
-
----
-
-## 14. Future Improvements
-
-Potential enhancements include:
-
-* User authentication
-* Payment gateway integration
-* Database persistence
-* Product search
-* Filtering and sorting mechanisms
-* Rating and review system
-
-These additions would increase realism and usability.
-
----
-
-## 15. Known Limitations
-
-Current implementation limitations:
-
-* No persistent backend storage
-* No server‑side authentication
-* Limited product catalog due to external API restrictions
-
-These limitations were accepted due to project scope constraints.
-
----
-
-## 16. Deployment Instructions
-
-EBRA Store Premium is fully compatible with Vercel. To deploy:
-
-1. Commit all changes
-2. Push to GitHub
-3. Log in to Vercel
-4. Import the GitHub repository
-5. Trigger deployment
-
-Local production build:
-
-```
-npm run build
-npm start
-```
-
----
-
-## 17. License
-
-This project is distributed under the MIT License, allowing free use, modification, and distribution.
-
----
-
-## Final Note
-
-This project demonstrates foundational proficiency in full‑stack web development using modern technologies. It was created entirely by:
-
-## Developed by Lara Madkhali
-
-Thank you for reviewing and evaluating this assessment submission.
+Developed by Lara Madkhali
