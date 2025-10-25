@@ -1,5 +1,6 @@
-# EBRA Store Premium
+# README.md
 
+# EBRA Store Premium
 
 ## Overview
 
@@ -15,21 +16,20 @@ This README covers installation, features, architecture, state management, perfo
 
 1. Features
 2. Technologies Used
-3. Project Structure
-4. Getting Started
-5. Pages Overview
-6. Cart Management Logic
-7. API Consumption
-8. Error Handling
-9. Loading State Handling
-10. Responsive Design
-11. Code Quality and Practices
-12. Edge Cases Handling
-13. Contribution Guidelines
-14. Future Improvements
-15. Known Limitations
-16. Deployment Instructions
-17. License
+3. Getting Started
+4. Pages Overview
+5. Cart Management Logic
+6. API Consumption
+7. Error Handling
+8. Loading State Handling
+9. Responsive Design
+10. Code Quality and Practices
+11. Edge Cases Handling
+12. Contribution Guidelines
+13. Future Improvements
+14. Known Limitations
+15. Deployment Instructions
+16. License
 
 ---
 
@@ -66,79 +66,85 @@ EBRA Store Premium includes a comprehensive set of features expected from modern
 
 ---
 
-## 3. Project Structure
+## 3. Getting Started
 
-Below is an improved visual representation of the project's file structure to enhance readability and clarity:
-
-```
-ebra-store-premium/
-│
-├── app/                      # Application routing and page files
-│   ├── page.tsx              # Product list page (home)
-│   ├── cart/
-│   │   └── page.tsx          # Shopping cart page
-│   └── product/
-│       └── [id]/
-│           └── page.tsx      # Dynamic product details
-│
-├── components/               # Reusable UI components
-│   ├── Navbar.tsx            # Sticky top navigation bar
-│   ├── Footer.tsx            # Footer component
-│   ├── ProductCard.tsx       # Product preview card layout
-│   ├── ProductDetails.tsx    # Detailed product information view
-│   └── CartItem.tsx          # Individual cart item display
-│
-├── store/                    # Global state management (Zustand)
-│   └── cart.ts               # Cart store logic and actions
-│
-├── lib/                      # Utility and helper functions
-│   └── api.ts                # API request handlers
-│
-├── styles/                   # Global and tailwind styles
-│   └── globals.css           # Global CSS overrides
-│
-├── public/                   # Static assets (images, icons, etc.)
-│
-├── tailwind.config.ts        # TailwindCSS configuration
-├── tsconfig.json             # TypeScript configuration
-├── package.json              # Dependency and script definitions
-└── README.md                 # Project documentation
-```
-
----
-
-## 4. Getting Started
-
-Follow these steps to install and run the application locally:
+Follow these steps to quickly set up and run EBRA Store Premium on your local machine.
 
 ### Prerequisites
 
-* Node.js version 18+
-* npm installed on your system
+* **Node.js** version 18 or higher
+* **npm** installed globally
+* Optional: **Visual Studio Code** or any code editor for development
 
 ### Installation
 
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Vx9a/ebra-store-premium.git
 ```
+
+2. Navigate into the project directory:
+
+```bash
+cd ebra-store-premium
+```
+
+3. Install dependencies:
+
+```bash
 npm install
 ```
 
-### Run Development Server
+### Running the Development Server
 
-```
+Start the application in development mode with:
+
+```bash
 npm run dev
 ```
 
-### Access Application
-
-After the terminal reports successful startup, visit:
+Open your browser and go to:
 
 ```
 http://localhost:3000
 ```
 
+You should now see the EBRA Store Premium homepage with product listings.
+
+### Environment Configuration
+
+* No additional environment setup is required for the Fake Store API.
+* For custom API endpoints, create a `.env` file at the root and define:
+
+```bash
+NEXT_PUBLIC_API_URL=https://fakestoreapi.com
+```
+
+### Folder Overview
+
+* **`app/`** — Contains pages and routing
+* **`components/`** — Reusable UI components
+* **`store/`** — Global state management using Zustand
+* **`lib/`** — Helper functions and API requests
+* **`styles/`** — Tailwind CSS and global styles
+* **`public/`** — Static assets (images, icons)
+* **Configuration files** — Tailwind, TypeScript, package.json
+
+### Next Steps
+
+After setup, you can:
+
+* Explore product browsing
+* Test cart functionality
+* Add or remove items
+* Observe dynamic pricing updates
+
+This section ensures developers can start using and contributing to EBRA Store Premium immediately.
+
 ---
 
-## 5. Pages Overview
+## 4. Pages Overview
 
 ### Product List (`/`)
 
@@ -169,7 +175,7 @@ Allows users to:
 
 ---
 
-## 6. Cart Management Logic
+## 5. Cart Management Logic
 
 Zustand is used to manage the cart globally without prop drilling. The cart maintains:
 
@@ -181,7 +187,7 @@ Cart calculations update dynamically and reflect accurate totals even during fas
 
 ---
 
-## 7. API Consumption
+## 6. API Consumption
 
 EBRA Store Premium integrates with:
 [https://fakestoreapi.com/docs](https://fakestoreapi.com/docs)
@@ -195,7 +201,7 @@ The application handles asynchronous requests while ensuring proper loading UI.
 
 ---
 
-## 8. Error Handling
+## 7. Error Handling
 
 Robust error handling ensures a reliable user experience:
 
@@ -206,7 +212,7 @@ Robust error handling ensures a reliable user experience:
 
 ---
 
-## 9. Loading State Handling
+## 8. Loading State Handling
 
 Next.js Route segments introduce built‑in loading behavior. The application uses:
 
@@ -217,7 +223,7 @@ This preserves visual continuity for slower network connections.
 
 ---
 
-## 10. Responsive Design
+## 9. Responsive Design
 
 The layout automatically adjusts via Tailwind breakpoints:
 
@@ -233,7 +239,7 @@ The design was tested on:
 
 ---
 
-## 11. Code Quality and Practices
+## 10. Code Quality and Practices
 
 Best practices applied:
 
@@ -247,7 +253,7 @@ This improves readability, maintenance, and scalability.
 
 ---
 
-## 12. Edge Cases Handling
+## 11. Edge Cases Handling
 
 The following situations are explicitly controlled:
 
@@ -260,9 +266,10 @@ The following situations are explicitly controlled:
 
 ---
 
-## 13. License
+## 12. License
 
 This project is distributed under the MIT License.
+
 ---
 
 ## Credits
