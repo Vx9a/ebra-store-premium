@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+body { background: #F8F5F0; color: #3B3B3B; }
+
+.container-narrow { @apply max-w-6xl mx-auto px-4; }
+
+.btn-gold {
+  @apply inline-flex items-center justify-center font-medium px-5 py-3 rounded-2xl text-white;
+  background: linear-gradient(135deg, #D4AF37 0%, #F8E8A1 100%);
+  transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: 0 6px 18px rgba(212,175,55,0.25);
+}
+.btn-gold:hover { transform: translateY(-1px); box-shadow: 0 10px 26px rgba(212,175,55,0.35); }
+
+.card { @apply bg-white rounded-2xl border; box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
+.nav-blur { @apply bg-white/70 backdrop-blur border-b; box-shadow: 0 6px 16px rgba(0,0,0,0.04); }
+.badge { @apply text-xs uppercase tracking-wide bg-ivory text-ink px-3 py-1 rounded-full border; border-color: rgba(212,175,55,0.35); }
+
+.fade-up { animation: fadeUp .45s ease-out both; }
+@keyframes fadeUp { from { opacity:0; transform: translateY(6px) } to { opacity:1; transform: translateY(0) } }

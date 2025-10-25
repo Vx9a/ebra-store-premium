@@ -1,0 +1,1 @@
+ 'use client'; import ErrorMessage from '@/components/ErrorMessage'; export default function RootError({error}:{error:Error&{digest?:string}}){return <ErrorMessage message={error.message}/>}
