@@ -1,8 +1,5 @@
 # EBRA Store Premium
 
-## Credits
-
-Developed by Lara Madkhali
 
 ## Overview
 
@@ -266,6 +263,7 @@ The following situations are explicitly controlled:
 ## 13. License
 
 This project is distributed under the MIT License.
+---
 
 ## Credits
 
